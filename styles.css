@@ -6316,7 +6316,7 @@ body::before {
         width: fit-content !important;
         margin: 0 !important;
         padding: 0 !important;
-        z-index: 8 !important;
+        z-index: 30 !important;
         display: grid !important;
         place-items: center !important;
         isolation: isolate !important;
@@ -6334,7 +6334,6 @@ body::before {
     }
 
     .home-img:hover img {
-        transform: scale(1.025) !important;
         box-shadow:
             0 0 30px var(--main-color),
             0 0 70px rgba(0, 255, 238, 0.58),
@@ -6373,7 +6372,7 @@ body::before {
         inset: auto auto auto clamp(465px, 35vw, 560px) !important;
         transform: translateY(-50%) scale(0.86) !important;
         transform-origin: left center !important;
-        z-index: 14 !important;
+        z-index: 12 !important;
         margin: 0 !important;
         pointer-events: auto !important;
         animation: commandFloat 5s ease-in-out infinite !important;
@@ -6501,21 +6500,36 @@ body::before {
         will-change: auto !important;
     }
 }
-@media (min-width: 1100px) and (max-width: 1450px) {
+
+
+/* =========================================================
+   PROFILE IMAGE INTERACTION FIX
+   Keeps the 13-inch layout, but does NOT override JS/hover transforms.
+   Do not put transform: ... !important on .home-img img below this.
+========================================================= */
+@media (min-width: 1100px) and (max-width: 1560px) {
     .home-img {
-        transform: none !important;
+        pointer-events: auto !important;
+        z-index: 30 !important;
     }
 
     .home-img img {
-        transition: transform 0.28s ease, box-shadow 0.35s ease !important;
-        will-change: transform;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        transform-style: preserve-3d;
+        will-change: transform, box-shadow, filter;
+        transition: box-shadow 0.35s ease, filter 0.35s ease;
     }
 
     .home-img:hover img {
-        transform: scale(1.045) !important;
         box-shadow:
-            0 0 25px var(--main-color),
-            0 0 55px var(--main-color),
-            0 0 100px rgba(0, 255, 238, 0.45) !important;
+            0 0 30px var(--main-color),
+            0 0 70px rgba(0, 255, 238, 0.58),
+            0 0 120px rgba(0, 255, 238, 0.35) !important;
+        filter: brightness(1.04) contrast(1.02) !important;
+    }
+
+    .hero-command-center {
+        z-index: 12 !important;
     }
 }
