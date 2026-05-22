@@ -5703,7 +5703,6 @@ body::before {
     }
 }
 
-/* Fix mobile project category after closing modal */
 @media (max-width: 991px) {
     .project-category-card.active .category-projects {
         max-height: 1400px !important;
@@ -5713,7 +5712,7 @@ body::before {
     }
 }
 
-/* Fix project details touching modal bottom on mobile */
+
 @media (max-width: 700px) {
     .project-modal-content {
         padding-bottom: 3.5rem !important;
@@ -5749,9 +5748,6 @@ body::before {
 
 }
 
-/* ===== Light Theme Navbar Fix ===== */
-
-/* Keep navbar dark in light mode */
 :root.light-theme .header {
     background: rgba(0, 0, 0, 0.72) !important;
     backdrop-filter: blur(14px);
@@ -5782,10 +5778,7 @@ body::before {
 }
 
 
-/* =========================================================
-   FINAL CLEAN NAVBAR LOCK
-   Keeps the navbar premium/dark in BOTH dark and light mode
-   ========================================================= */
+
 
 .header {
     background:
@@ -5862,10 +5855,7 @@ body::before {
     background: var(--main-color) !important;
 }
 
-/* =========================================================
-   FINAL MOBILE NAVBAR LOCK
-   Clean mobile dropdown in light/dark mode
-   ========================================================= */
+
 
 @media (max-width: 991px) {
 
@@ -5921,10 +5911,7 @@ body::before {
     }
 }
 
-/* =========================================================
-   FINAL MICRO FIXES
-   Prevent tiny-screen logo clipping and keep hero stable
-   ========================================================= */
+
 
 @media (max-width: 560px) {
 
@@ -5956,7 +5943,6 @@ body::before {
     }
 }
 
-/* Mobile modal breathing room */
 @media (max-width: 700px) {
     .project-modal-content {
         padding-left: 1.6rem !important;
@@ -5976,7 +5962,7 @@ body::before {
 }
 
 
-/* ---------- GitHub Project Button ---------- */
+
 .github-btn {
     border-color: rgba(255, 255, 255, 0.55);
 }
@@ -6023,11 +6009,8 @@ body::before {
     visibility: visible;
 }
 
-/* =========================================================
-   FINAL SAFE RESPONSIVE LAYER — laptop + mobile safe
-   ========================================================= */
 
-/* Desktop/Laptop header compression */
+
 @media (min-width: 992px) and (max-width: 1560px) {
     html {
         font-size: 56%;
@@ -6102,7 +6085,7 @@ body::before {
     }
 }
 
-/* 13-inch / laptop hero: text left, image right, command card under image */
+
 @media (min-width: 992px) and (max-width: 1560px) {
     .home {
         display: grid !important;
@@ -6246,7 +6229,7 @@ body::before {
     }
 }
 
-/* Short laptop screens: keep everything visible without cropping */
+
 @media (min-width: 992px) and (max-width: 1560px) and (max-height: 850px) {
     .home {
         padding-top: 11rem !important;
@@ -6303,7 +6286,7 @@ body::before {
     }
 }
 
-/* Contact section: all buttons fit on one row on laptop screens */
+
 @media (min-width: 992px) and (max-width: 1560px) {
     .contact {
         min-height: 92vh !important;
@@ -6338,7 +6321,7 @@ body::before {
     }
 }
 
-/* Mobile protection: do not let laptop overrides affect phones/tablets */
+
 @media (max-width: 991px) {
     .hero-command-center {
         display: none !important;
@@ -6397,11 +6380,52 @@ body::before {
     }
 }
 
-/* =========================================================
-   FINAL SAFE FIX: 13-inch hero image interaction
-   - keeps JS tilt working by NOT using transform: ... !important on .home-img img
-   - keeps command card beside the image without covering the hover area
-   ========================================================= */
+@media (min-width: 992px) and (max-width: 1440px) {
+    .home {
+        display: grid !important;
+        grid-template-columns: 52% 48% !important;
+        align-items: center !important;
+        column-gap: 2rem !important;
+        padding: 12rem 6% 6rem !important;
+    }
+
+    .home-content {
+        grid-column: 1 !important;
+        max-width: 560px !important;
+    }
+
+    .home-img {
+        grid-column: 2 !important;
+        grid-row: 1 !important;
+        justify-self: center !important;
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .home-img img {
+        width: 520px !important;
+        height: 520px !important;
+    }
+
+    .image-ring {
+        width: 565px !important;
+        height: 565px !important;
+    }
+
+    .ring-two {
+        width: 625px !important;
+        height: 625px !important;
+    }
+
+    .hero-command-center {
+        position: absolute !important;
+        left: 38% !important;
+        bottom: 7rem !important;
+        transform: scale(.78) !important;
+        transform-origin: left bottom !important;
+        z-index: 5 !important;
+    }
+}
 @media (min-width: 992px) and (max-width: 1560px) {
     .home {
         overflow: visible !important;
