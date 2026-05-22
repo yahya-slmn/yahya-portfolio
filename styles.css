@@ -6087,207 +6087,6 @@ body::before {
 
 
 @media (min-width: 992px) and (max-width: 1560px) {
-    .home {
-        display: grid !important;
-        grid-template-columns: minmax(390px, 0.95fr) minmax(430px, 1.05fr) !important;
-        grid-template-areas:
-            "content image"
-            "content command" !important;
-        align-items: center !important;
-        justify-content: center !important;
-        column-gap: clamp(3rem, 5vw, 7rem) !important;
-        row-gap: 3.2rem !important;
-        min-height: 100vh !important;
-        padding: 12.5rem clamp(5rem, 7vw, 10rem) 6rem !important;
-    }
-
-    .home-content {
-        grid-area: content !important;
-        max-width: 540px !important;
-        width: 100% !important;
-        margin-top: 0 !important;
-        align-self: center !important;
-        justify-self: start !important;
-        text-align: left !important;
-        align-items: flex-start !important;
-    }
-
-    .home-content h1 {
-        font-size: clamp(5rem, 4.6vw, 6.5rem) !important;
-        line-height: 1.03 !important;
-        margin-top: 0.8rem !important;
-    }
-
-    .home-content h3,
-    .text-animation {
-        font-size: clamp(2.55rem, 2.45vw, 3.35rem) !important;
-        line-height: 1.22 !important;
-        min-width: 0 !important;
-        white-space: nowrap !important;
-    }
-
-    .home-content p {
-        max-width: 500px !important;
-        font-size: 1.42rem !important;
-        line-height: 1.7 !important;
-    }
-
-    .hero-signature {
-        max-width: 500px !important;
-    }
-
-    .hero-actions,
-    .stats-container,
-    .social-icons {
-        justify-content: flex-start !important;
-    }
-
-    .stats-container {
-        display: grid !important;
-        grid-template-columns: repeat(2, minmax(170px, 1fr)) !important;
-        max-width: 430px !important;
-        gap: 1.55rem !important;
-    }
-
-    .stat-box {
-        min-width: 0 !important;
-        width: 100% !important;
-        padding: 1.75rem 1.8rem !important;
-    }
-
-    .stats-container .stat-box:nth-child(3) {
-        grid-column: 1 / -1 !important;
-        max-width: 210px !important;
-        justify-self: start !important;
-    }
-
-    .social-icons {
-        display: flex !important;
-        flex-wrap: nowrap !important;
-        width: fit-content !important;
-        max-width: 100% !important;
-        gap: 1.15rem !important;
-    }
-
-    .social-icons a {
-        flex: 0 0 auto !important;
-        margin-right: 0 !important;
-    }
-
-    .home-img {
-        grid-area: image !important;
-        align-self: end !important;
-        justify-self: center !important;
-        margin: 0 !important;
-        padding: 0 !important;
-        width: fit-content !important;
-    }
-
-    .home-img img {
-        width: clamp(350px, 29vw, 430px) !important;
-        height: clamp(350px, 29vw, 430px) !important;
-    }
-
-    .image-ring {
-        width: clamp(390px, 32vw, 480px) !important;
-        height: clamp(390px, 32vw, 480px) !important;
-    }
-
-    .ring-two {
-        width: clamp(430px, 35vw, 535px) !important;
-        height: clamp(430px, 35vw, 535px) !important;
-    }
-
-    .home-img::before {
-        width: clamp(480px, 39vw, 590px) !important;
-        height: clamp(480px, 39vw, 590px) !important;
-    }
-
-    .hero-command-center {
-        grid-area: command !important;
-        display: block !important;
-        position: relative !important;
-        inset: auto !important;
-        justify-self: center !important;
-        align-self: start !important;
-        width: min(300px, 82%) !important;
-        min-width: 250px !important;
-        padding: 1.45rem !important;
-        transform: none !important;
-        animation: commandFloat 5s ease-in-out infinite !important;
-        margin: 0 !important;
-        z-index: 4 !important;
-    }
-
-    .command-screen {
-        padding: 1.25rem !important;
-    }
-
-    .mini-bars {
-        height: 88px !important;
-        margin: 1.2rem 0 !important;
-    }
-}
-
-
-@media (min-width: 992px) and (max-width: 1560px) and (max-height: 850px) {
-    .home {
-        padding-top: 11rem !important;
-        padding-bottom: 4.5rem !important;
-        row-gap: 2.4rem !important;
-    }
-
-    .hero-eyebrow {
-        margin-bottom: 1.1rem !important;
-    }
-
-    .home-content h1 {
-        font-size: clamp(4.7rem, 4.1vw, 5.8rem) !important;
-    }
-
-    .home-content p {
-        line-height: 1.58 !important;
-        margin-top: 0.2rem !important;
-    }
-
-    .hero-signature {
-        margin-top: 1.1rem !important;
-    }
-
-    .hero-actions {
-        margin-top: 1.8rem !important;
-    }
-
-    .stats-container {
-        margin-top: 1.8rem !important;
-    }
-
-    .home-img img {
-        width: clamp(330px, 27vw, 400px) !important;
-        height: clamp(330px, 27vw, 400px) !important;
-    }
-
-    .image-ring {
-        width: clamp(370px, 30vw, 450px) !important;
-        height: clamp(370px, 30vw, 450px) !important;
-    }
-
-    .ring-two {
-        width: clamp(410px, 33vw, 500px) !important;
-        height: clamp(410px, 33vw, 500px) !important;
-    }
-
-    .hero-command-center {
-        width: min(285px, 80%) !important;
-    }
-
-    .mini-bars {
-        height: 72px !important;
-    }
-}
-
-
-@media (min-width: 992px) and (max-width: 1560px) {
     .contact {
         min-height: 92vh !important;
         padding-top: 10rem !important;
@@ -6361,117 +6160,6 @@ body::before {
     }
 }
 
-@media (min-width: 992px) and (max-width: 1440px) {
-    .home-img {
-        pointer-events: auto;
-        cursor: pointer;
-    }
-
-    .home-img img {
-        transition: transform 0.25s ease, box-shadow 0.35s ease;
-    }
-
-    .home-img:hover img {
-        transform: scale(1.035);
-        box-shadow:
-            0 0 28px var(--main-color),
-            0 0 65px var(--main-color),
-            0 0 115px rgba(0, 255, 238, 0.45);
-    }
-}
-
-@media (min-width: 992px) and (max-width: 1440px) {
-    .home {
-        display: grid !important;
-        grid-template-columns: 52% 48% !important;
-        align-items: center !important;
-        column-gap: 2rem !important;
-        padding: 12rem 6% 6rem !important;
-    }
-
-    .home-content {
-        grid-column: 1 !important;
-        max-width: 560px !important;
-    }
-
-    .home-img {
-        grid-column: 2 !important;
-        grid-row: 1 !important;
-        justify-self: center !important;
-        padding-bottom: 0 !important;
-        margin-bottom: 0 !important;
-    }
-
-    .home-img img {
-        width: 520px !important;
-        height: 520px !important;
-    }
-
-    .image-ring {
-        width: 565px !important;
-        height: 565px !important;
-    }
-
-    .ring-two {
-        width: 625px !important;
-        height: 625px !important;
-    }
-
-    .hero-command-center {
-        position: absolute !important;
-        left: 38% !important;
-        bottom: 7rem !important;
-        transform: scale(.78) !important;
-        transform-origin: left bottom !important;
-        z-index: 5 !important;
-    }
-}
-@media (min-width: 992px) and (max-width: 1560px) {
-    .home {
-        overflow: visible !important;
-    }
-
-    .home-img {
-        position: relative !important;
-        display: grid !important;
-        place-items: center !important;
-        pointer-events: auto !important;
-        cursor: pointer !important;
-        z-index: 10 !important;
-        isolation: isolate !important;
-        transform-style: preserve-3d !important;
-    }
-
-    .home-img img {
-        pointer-events: auto !important;
-        cursor: pointer !important;
-        transform-origin: center center !important;
-        transform-style: preserve-3d !important;
-        backface-visibility: hidden !important;
-        will-change: transform, box-shadow !important;
-        transition: box-shadow 0.35s ease, filter 0.35s ease !important;
-    }
-
-    .home-img:hover img {
-        box-shadow:
-            0 0 30px var(--main-color),
-            0 0 70px rgba(0, 255, 238, 0.58),
-            0 0 120px rgba(0, 255, 238, 0.35) !important;
-        filter: brightness(1.04) contrast(1.02) !important;
-    }
-
-    .image-ring,
-    .ring-two,
-    .home-img::before {
-        pointer-events: none !important;
-    }
-
-    .hero-command-center {
-        pointer-events: auto !important;
-        z-index: 5 !important;
-    }
-}
-
 /* Loader dots stay exactly on the orbit line on mobile */
 @media (max-width: 600px) {
     .loader-orbit {
@@ -6490,5 +6178,326 @@ body::before {
         bottom: -7px !important;
         left: 50% !important;
         transform: translateX(-50%) !important;
+    }
+}
+
+
+/* =========================================================
+   FINAL 13-INCH LAPTOP HERO LAYOUT
+   - Keeps mobile rules untouched
+   - Makes the hero image dominate the right side
+   - Moves Analytics Command Center near buttons/KPIs
+   ========================================================= */
+@media (min-width: 1100px) and (max-width: 1560px) {
+    .header {
+        padding: 2.25rem 4.2% !important;
+    }
+
+    .logo {
+        font-size: 2.85rem !important;
+    }
+
+    .navbar a {
+        margin-left: 2rem !important;
+        font-size: 1.62rem !important;
+    }
+
+    .header-actions {
+        gap: 1.1rem !important;
+    }
+
+    .ai-nav-btn,
+    .theme-btn {
+        padding: 1rem 2rem !important;
+        font-size: 1.45rem !important;
+    }
+
+    .home {
+        position: relative !important;
+        display: grid !important;
+        grid-template-columns: minmax(470px, 44%) minmax(560px, 56%) !important;
+        grid-template-areas: "content image" !important;
+        align-items: center !important;
+        justify-content: center !important;
+        column-gap: 2.8rem !important;
+        min-height: 100vh !important;
+        padding: 12.2rem 5.5% 6rem !important;
+        overflow: visible !important;
+    }
+
+    .home-content {
+        grid-area: content !important;
+        width: 100% !important;
+        max-width: 540px !important;
+        margin-top: 0 !important;
+        justify-self: start !important;
+        align-self: center !important;
+        align-items: flex-start !important;
+        text-align: left !important;
+        z-index: 12 !important;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 1.3rem !important;
+    }
+
+    .home-content h1 {
+        font-size: clamp(5.6rem, 4.55vw, 6.75rem) !important;
+        line-height: 0.96 !important;
+        margin-top: 0.7rem !important;
+    }
+
+    .home-content h3,
+    .text-animation {
+        font-size: clamp(2.8rem, 2.35vw, 3.45rem) !important;
+        line-height: 1.2 !important;
+        min-width: 0 !important;
+        white-space: nowrap !important;
+    }
+
+    .home-content p {
+        max-width: 510px !important;
+        font-size: 1.48rem !important;
+        line-height: 1.65 !important;
+    }
+
+    .hero-signature {
+        max-width: 510px !important;
+    }
+
+    .hero-actions,
+    .stats-container,
+    .social-icons {
+        justify-content: flex-start !important;
+    }
+
+    .hero-actions {
+        margin-top: 2.3rem !important;
+    }
+
+    .stats-container {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(165px, 1fr)) !important;
+        max-width: 430px !important;
+        gap: 1.45rem !important;
+        margin-top: 2rem !important;
+    }
+
+    .stat-box {
+        min-width: 0 !important;
+        width: 100% !important;
+        padding: 1.8rem 1.65rem !important;
+    }
+
+    .stats-container .stat-box:nth-child(3) {
+        grid-column: 1 / -1 !important;
+        max-width: 215px !important;
+        justify-self: start !important;
+    }
+
+    .social-icons {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        gap: 1.2rem !important;
+        margin-top: 2rem !important;
+        width: fit-content !important;
+    }
+
+    .social-icons a {
+        margin: 0 !important;
+        flex: 0 0 auto !important;
+    }
+
+    .home-img {
+        grid-area: image !important;
+        position: relative !important;
+        justify-self: end !important;
+        align-self: center !important;
+        width: fit-content !important;
+        margin: 0 !important;
+        padding: 0 !important;
+        z-index: 8 !important;
+        display: grid !important;
+        place-items: center !important;
+        isolation: isolate !important;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+    }
+
+    .home-img img {
+        width: clamp(520px, 38vw, 610px) !important;
+        height: clamp(520px, 38vw, 610px) !important;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        will-change: transform, box-shadow !important;
+        transition: transform 0.25s ease, box-shadow 0.35s ease, filter 0.35s ease !important;
+    }
+
+    .home-img:hover img {
+        transform: scale(1.025) !important;
+        box-shadow:
+            0 0 30px var(--main-color),
+            0 0 70px rgba(0, 255, 238, 0.58),
+            0 0 120px rgba(0, 255, 238, 0.35) !important;
+        filter: brightness(1.04) contrast(1.02) !important;
+    }
+
+    .image-ring {
+        width: clamp(570px, 42vw, 670px) !important;
+        height: clamp(570px, 42vw, 670px) !important;
+        pointer-events: none !important;
+    }
+
+    .ring-two {
+        width: clamp(630px, 47vw, 745px) !important;
+        height: clamp(630px, 47vw, 745px) !important;
+        pointer-events: none !important;
+    }
+
+    .home-img::before {
+        width: clamp(660px, 50vw, 790px) !important;
+        height: clamp(660px, 50vw, 790px) !important;
+        pointer-events: none !important;
+    }
+
+    .hero-command-center {
+        display: block !important;
+        position: absolute !important;
+        width: 295px !important;
+        min-width: 0 !important;
+        padding: 1.45rem !important;
+        left: clamp(465px, 35vw, 560px) !important;
+        top: clamp(520px, 64vh, 640px) !important;
+        right: auto !important;
+        bottom: auto !important;
+        inset: auto auto auto clamp(465px, 35vw, 560px) !important;
+        transform: translateY(-50%) scale(0.86) !important;
+        transform-origin: left center !important;
+        z-index: 14 !important;
+        margin: 0 !important;
+        pointer-events: auto !important;
+        animation: commandFloat 5s ease-in-out infinite !important;
+    }
+
+    .command-screen {
+        padding: 1.25rem !important;
+    }
+
+    .mini-bars {
+        height: 78px !important;
+        margin: 1.1rem 0 !important;
+    }
+}
+
+/* Smaller 13-inch browser heights: keep everything visible above the fold */
+@media (min-width: 1100px) and (max-width: 1560px) and (max-height: 850px) {
+    .home {
+        padding-top: 10.8rem !important;
+        padding-bottom: 4rem !important;
+    }
+
+    .home-content h1 {
+        font-size: clamp(5.2rem, 4.15vw, 6.1rem) !important;
+    }
+
+    .home-content h3,
+    .text-animation {
+        font-size: clamp(2.55rem, 2.1vw, 3.1rem) !important;
+    }
+
+    .home-content p {
+        line-height: 1.55 !important;
+        margin-top: 0.3rem !important;
+    }
+
+    .hero-signature {
+        margin-top: 1rem !important;
+    }
+
+    .hero-actions {
+        margin-top: 1.7rem !important;
+    }
+
+    .stats-container {
+        margin-top: 1.55rem !important;
+    }
+
+    .social-icons {
+        margin-top: 1.5rem !important;
+    }
+
+    .home-img img {
+        width: clamp(490px, 35vw, 560px) !important;
+        height: clamp(490px, 35vw, 560px) !important;
+    }
+
+    .image-ring {
+        width: clamp(540px, 39vw, 625px) !important;
+        height: clamp(540px, 39vw, 625px) !important;
+    }
+
+    .ring-two {
+        width: clamp(595px, 43vw, 690px) !important;
+        height: clamp(595px, 43vw, 690px) !important;
+    }
+
+    .hero-command-center {
+        width: 280px !important;
+        top: clamp(485px, 66vh, 590px) !important;
+        transform: translateY(-50%) scale(0.82) !important;
+    }
+
+    .mini-bars {
+        height: 68px !important;
+    }
+}
+
+/* Keep Contact buttons in one line on laptop/tablet-width desktops */
+@media (min-width: 992px) and (max-width: 1560px) {
+    .contact-buttons {
+        display: flex !important;
+        flex-wrap: nowrap !important;
+        justify-content: center !important;
+        align-items: center !important;
+        gap: 1.15rem !important;
+        width: 100% !important;
+        max-width: 1180px !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+    }
+
+    .contact-btn {
+        min-width: 0 !important;
+        width: 20% !important;
+        max-width: 210px !important;
+        padding: 1.35rem 1.25rem !important;
+        font-size: 1.42rem !important;
+        white-space: nowrap !important;
+        flex: 1 1 0 !important;
+    }
+
+    .contact-btn i {
+        font-size: 2.05rem !important;
+    }
+}
+
+/* Mobile stays simple and fast */
+@media (max-width: 991px) {
+    .hero-command-center {
+        display: none !important;
+    }
+
+    body.site-ready .home-img {
+        animation-delay: 0.1s !important;
+        animation-duration: 0.55s !important;
+    }
+
+    .home-img {
+        padding-bottom: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .home-img img {
+        will-change: auto !important;
     }
 }
