@@ -6397,46 +6397,74 @@ body::before {
     }
 }
 
-/* 13-inch hero interaction fix */
+/* =========================================================
+   FINAL SAFE FIX: 13-inch hero image interaction
+   - keeps JS tilt working by NOT using transform: ... !important on .home-img img
+   - keeps command card beside the image without covering the hover area
+   ========================================================= */
 @media (min-width: 992px) and (max-width: 1560px) {
     .home {
-        align-items: center !important;
         overflow: visible !important;
     }
 
     .home-img {
         position: relative !important;
-        transform: none !important;
-        transition: transform 0.25s ease, filter 0.25s ease !important;
+        display: grid !important;
+        place-items: center !important;
         pointer-events: auto !important;
-        z-index: 4 !important;
+        cursor: pointer !important;
+        z-index: 10 !important;
+        isolation: isolate !important;
+        transform-style: preserve-3d !important;
     }
 
     .home-img img {
-        transform: none !important;
-        transition: transform 0.35s ease, box-shadow 0.35s ease !important;
-        will-change: transform;
+        pointer-events: auto !important;
+        cursor: pointer !important;
+        transform-origin: center center !important;
+        transform-style: preserve-3d !important;
+        backface-visibility: hidden !important;
+        will-change: transform, box-shadow !important;
+        transition: box-shadow 0.35s ease, filter 0.35s ease !important;
     }
 
     .home-img:hover img {
-        transform: scale(1.025) !important;
         box-shadow:
             0 0 30px var(--main-color),
-            0 0 70px rgba(0, 255, 238, 0.6),
+            0 0 70px rgba(0, 255, 238, 0.58),
             0 0 120px rgba(0, 255, 238, 0.35) !important;
+        filter: brightness(1.04) contrast(1.02) !important;
+    }
+
+    .image-ring,
+    .ring-two,
+    .home-img::before {
+        pointer-events: none !important;
     }
 
     .hero-command-center {
-        position: relative !important;
-        transform: scale(0.86) !important;
-        margin-left: -2rem !important;
-        margin-right: -1rem !important;
-        z-index: 3 !important;
+        pointer-events: auto !important;
+        z-index: 5 !important;
+    }
+}
+
+/* Loader dots stay exactly on the orbit line on mobile */
+@media (max-width: 600px) {
+    .loader-orbit {
+        width: 310px !important;
+        height: 310px !important;
     }
 
-    .text-animation,
-    .home-content h3 {
-        min-width: 460px !important;
-        white-space: nowrap !important;
+    .loader-orbit span:first-child {
+        top: -7px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
+    }
+
+    .loader-orbit span:last-child {
+        right: auto !important;
+        bottom: -7px !important;
+        left: 50% !important;
+        transform: translateX(-50%) !important;
     }
 }
