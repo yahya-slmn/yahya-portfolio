@@ -6343,3 +6343,31 @@ body::before {
         will-change: auto !important;
     }
 }
+
+
+@media (min-width: 992px) and (max-width: 1440px) {
+    .hero-command-center {
+        margin-top: 2.8rem;
+        transform: scale(0.92);
+    }
+
+    .home-img {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1440px) {
+    .contact-buttons {
+        max-width: 1120px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+        gap: 1.3rem;
+    }
+
+    .contact-btn {
+        min-width: 190px;
+        padding: 1.25rem 2rem;
+        font-size: 1.45rem;
+    }
+}
