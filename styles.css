@@ -6020,3 +6020,338 @@ body::before {
     opacity: 1;
     visibility: visible;
 }
+
+
+/* =========================================================
+   FINAL RESPONSIVE QA PATCH
+   13-inch laptops + tablets without breaking mobile
+   ========================================================= */
+
+/* 13-inch laptop / small desktop polish */
+@media (min-width: 992px) and (max-width: 1420px) {
+    html {
+        font-size: 56%;
+    }
+
+    .header {
+        padding: 2.2rem 5%;
+        gap: 1.4rem;
+        min-height: 82px;
+    }
+
+    .logo {
+        font-size: clamp(2.4rem, 2.4vw, 2.9rem);
+        flex-shrink: 0;
+    }
+
+    .navbar {
+        flex: 1 1 auto;
+        justify-content: center;
+        min-width: 0;
+    }
+
+    .navbar a {
+        margin-left: clamp(1.2rem, 1.35vw, 2rem);
+        font-size: clamp(1.38rem, 1.15vw, 1.62rem);
+        white-space: nowrap;
+    }
+
+    .header-actions {
+        gap: 1rem;
+        flex-shrink: 0;
+    }
+
+    .ai-nav-btn {
+        width: 4.8rem;
+        height: 4.8rem;
+        padding: 0;
+        border-radius: 50%;
+        justify-content: center;
+    }
+
+    .ai-nav-btn span {
+        display: none !important;
+    }
+
+    .theme-btn {
+        padding: 1rem 2rem;
+        font-size: 1.42rem;
+        min-height: 4.8rem;
+    }
+
+    .home {
+        display: grid;
+        grid-template-columns: minmax(390px, 0.95fr) minmax(420px, 1.05fr);
+        grid-template-areas:
+            "content image"
+            "content command";
+        align-items: center;
+        justify-content: center;
+        column-gap: clamp(3.5rem, 5vw, 7rem);
+        row-gap: 1.4rem;
+        min-height: 100vh;
+        padding: 12.8rem 7% 5.5rem;
+    }
+
+    .home-content {
+        grid-area: content;
+        max-width: 52rem;
+        margin-top: 0;
+        align-self: center;
+    }
+
+    .hero-eyebrow {
+        margin-bottom: 1.3rem;
+    }
+
+    .home-content h1 {
+        font-size: clamp(4.7rem, 4.35vw, 6.2rem);
+        line-height: 1.04;
+        margin-top: 0.9rem;
+    }
+
+    .home-content h3,
+    .text-animation {
+        font-size: clamp(2.35rem, 2.25vw, 3.15rem);
+        min-height: 3.9rem;
+        margin-bottom: 1.7rem;
+    }
+
+    #typed-role {
+        min-width: 23rem;
+        max-width: 34rem;
+    }
+
+    .home-content p {
+        max-width: 48rem;
+        font-size: 1.42rem;
+        line-height: 1.72;
+    }
+
+    .hero-signature {
+        gap: 0.8rem;
+        margin-top: 1.4rem;
+    }
+
+    .hero-signature span {
+        font-size: 1.05rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .hero-actions {
+        margin-top: 2.2rem;
+        gap: 1.2rem;
+    }
+
+    .hero-btn {
+        padding: 1.15rem 2.05rem;
+        font-size: 1.42rem;
+    }
+
+    .stats-container {
+        gap: 1.25rem;
+        margin-top: 2.3rem;
+    }
+
+    .stat-box {
+        min-width: 154px;
+        padding: 1.55rem 2rem;
+    }
+
+    .stat-box h2 {
+        font-size: 2.65rem;
+    }
+
+    .stat-box p {
+        font-size: 1.08rem;
+    }
+
+    .social-icons a {
+        width: 4.1rem;
+        height: 4.1rem;
+        font-size: 2.25rem;
+        margin: 2.2rem 1.05rem 0 0;
+    }
+
+    .home-img {
+        grid-area: image;
+        justify-self: center;
+        align-self: end;
+        margin-top: 0;
+    }
+
+    .home-img img {
+        width: clamp(365px, 33vw, 475px);
+        height: clamp(365px, 33vw, 475px);
+    }
+
+    .image-ring {
+        width: clamp(405px, 36vw, 525px);
+        height: clamp(405px, 36vw, 525px);
+    }
+
+    .ring-two {
+        width: clamp(450px, 40vw, 585px);
+        height: clamp(450px, 40vw, 585px);
+    }
+
+    .home-img::before {
+        width: clamp(490px, 44vw, 650px);
+        height: clamp(490px, 44vw, 650px);
+    }
+
+    .hero-command-center {
+        grid-area: command;
+        display: block !important;
+        width: min(300px, 84%);
+        min-width: 250px;
+        justify-self: center;
+        align-self: start;
+        margin-top: -0.8rem;
+        transform: none !important;
+    }
+
+    .command-screen {
+        padding: 1.35rem;
+    }
+
+    .contact {
+        padding-left: 5%;
+        padding-right: 5%;
+    }
+
+    .contact-buttons {
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 1rem;
+        max-width: 1180px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-btn {
+        min-width: 0;
+        flex: 1 1 0;
+        max-width: 210px;
+        padding: 1.35rem 1.35rem;
+        font-size: 1.35rem;
+        white-space: nowrap;
+    }
+
+    .contact-btn i {
+        font-size: 2rem;
+    }
+}
+
+/* Medium laptops where the header is the tightest */
+@media (min-width: 992px) and (max-width: 1180px) {
+    .header {
+        padding: 1.9rem 4%;
+    }
+
+    .navbar a {
+        margin-left: 1.05rem;
+        font-size: 1.32rem;
+    }
+
+    .theme-btn {
+        padding: 0.9rem 1.55rem;
+        font-size: 1.28rem;
+    }
+
+    .home {
+        grid-template-columns: minmax(350px, 0.95fr) minmax(360px, 1.05fr);
+        column-gap: 3rem;
+        padding-left: 5.2%;
+        padding-right: 5.2%;
+    }
+
+    .home-content h1 {
+        font-size: clamp(4.2rem, 4vw, 5.2rem);
+    }
+
+    .home-content p {
+        max-width: 44rem;
+        font-size: 1.35rem;
+    }
+
+    .hero-signature span {
+        white-space: normal;
+    }
+
+    .home-img img {
+        width: clamp(330px, 32vw, 405px);
+        height: clamp(330px, 32vw, 405px);
+    }
+
+    .image-ring {
+        width: clamp(365px, 35vw, 455px);
+        height: clamp(365px, 35vw, 455px);
+    }
+
+    .ring-two {
+        width: clamp(405px, 39vw, 510px);
+        height: clamp(405px, 39vw, 510px);
+    }
+
+    .hero-command-center {
+        width: min(285px, 86%);
+        margin-top: -0.4rem;
+    }
+
+    .contact-btn {
+        max-width: 190px;
+        padding-inline: 1.1rem;
+        font-size: 1.26rem;
+    }
+}
+
+/* Keep tablets and phones on the existing stacked/mobile experience */
+@media (max-width: 991px) {
+    .home {
+        display: flex !important;
+    }
+
+    .hero-command-center {
+        display: none !important;
+    }
+
+    .contact-buttons {
+        flex-wrap: wrap;
+    }
+}
+
+/* Small-phone performance: reduce heavy glow/3D work after loading */
+@media (max-width: 700px) {
+    .home-img img {
+        transition: opacity 0.25s ease, box-shadow 0.25s ease !important;
+        transform: none !important;
+        will-change: auto !important;
+    }
+
+    .image-ring,
+    .ring-two {
+        animation: none !important;
+    }
+
+    .home-img::before {
+        filter: blur(12px);
+    }
+
+    .home-img:hover img {
+        transform: none !important;
+    }
+}
+
+/* Contact section: avoid one icon/button jumping alone on common laptop widths */
+@media (min-width: 768px) and (max-width: 991px) {
+    .contact-buttons {
+        max-width: 760px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .contact-btn {
+        min-width: 210px;
+    }
+}
