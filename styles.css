@@ -6160,7 +6160,6 @@ body::before {
     }
 }
 
-/* Loader dots stay exactly on the orbit line on mobile */
 @media (max-width: 600px) {
     .loader-orbit {
         width: 310px !important;
@@ -6182,12 +6181,6 @@ body::before {
 }
 
 
-/* =========================================================
-   FINAL 13-INCH LAPTOP HERO LAYOUT
-   - Keeps mobile rules untouched
-   - Makes the hero image dominate the right side
-   - Moves Analytics Command Center near buttons/KPIs
-   ========================================================= */
 @media (min-width: 1100px) and (max-width: 1560px) {
     .header {
         padding: 2.25rem 4.2% !important;
@@ -6388,7 +6381,7 @@ body::before {
     }
 }
 
-/* Smaller 13-inch browser heights: keep everything visible above the fold */
+
 @media (min-width: 1100px) and (max-width: 1560px) and (max-height: 850px) {
     .home {
         padding-top: 10.8rem !important;
@@ -6451,7 +6444,6 @@ body::before {
     }
 }
 
-/* Keep Contact buttons in one line on laptop/tablet-width desktops */
 @media (min-width: 992px) and (max-width: 1560px) {
     .contact-buttons {
         display: flex !important;
@@ -6501,11 +6493,7 @@ body::before {
     }
 }
 
-/* =========================================================
-   PROFILE IMAGE INTERACTION RESTORE
-   IMPORTANT: no transform on hover here; JavaScript controls
-   the top / bottom / right / left 3D movement.
-   ========================================================= */
+
 @media (min-width: 992px) {
     .home-img {
         perspective: 1000px !important;
